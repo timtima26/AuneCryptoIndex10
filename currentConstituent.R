@@ -1,6 +1,6 @@
+################### 套件載入
 if(!require(RODBC)) install.packages("RODBC",repos = "https://mran.microsoft.com/snapshot/2019-01-10")
 if(!require(gWidgets)) install.packages("gWidgets",repos = "https://mran.microsoft.com/snapshot/2019-01-10")
-################### 套件載入
 if(!require(RMariaDB)) install.packages("RMariaDB",repos = "https://mran.microsoft.com/snapshot/2019-01-10")
 if(!require(dbConnect)) install.packages("dbConnect",repos = "https://mran.microsoft.com/snapshot/2019-01-10")
 if(!require(DBI)) install.packages("DBI",repos = "https://mran.microsoft.com/snapshot/2019-01-10")
@@ -25,7 +25,7 @@ library(lubridate)
 
 ################### 取ENV連DB(BETA mysql ) 
 
-env <- as.data.frame(system('cat /home/rstudio/cnyes_code/.env',intern = T))
+env <- as.data.frame(system('cat /home/rstudio/code/.env',intern = T))
 env <- as.data.frame(env[-which(env[,1]==''),])
 env <- as.data.frame(strsplit(as.character(env[,1]), split='='))
 
