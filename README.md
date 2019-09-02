@@ -69,9 +69,14 @@ MDJ=市值*當期F (步驟2) <br />
 ## 6. 排程：
 每季第三個禮拜五的早上2點 執行 步驟1 更新 A table的所有欄位 新增 A’ table的所有欄位資料 <br />
 每季第三個禮拜五的早上3點 執行 步驟2 更新 B table的所有欄位 新增 B’ table的所有欄位資料  <br />
-每日早上4點 執行 步驟4和5 新增 C&E table的所有欄位 <br />
+每日早上4點 執行 步驟4和5 新增 C&D table的所有欄位 <br />
 
+## 7. 執行須知
 
+accicalculateOnce.R : 補歷史資料 (執行一次)<br />
+調整日取成分股 (排程:每年二、五、九、十一月第三週禮拜五執行 中午十二點執行) #0 12 14-21 2,5,8,11 * if [ date ‘+\%w’ = "5" ]; then <Rscript currentConstituent.R >;fi <br />
+dailyindex.R : 每日爬前一日coinmarket收盤資料，計算當日指數 (排程:每天早上九點執行) <br />
+ 
 ## table name	description
 
 A:currentConstituent	當前成分股 <br />
