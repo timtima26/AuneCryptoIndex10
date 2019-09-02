@@ -25,7 +25,7 @@ library(lubridate)
 
 ###################取ENV連DB(BETA&BETA_RESULT) 
 
-env <- as.data.frame(system('cat /home/rstudio/cnyes_code/.env',intern = T))
+env <- as.data.frame(system('cat /home/rstudio/code/.env',intern = T))
 env <- as.data.frame(env[-which(env[,1]==''),])
 env <- as.data.frame(strsplit(as.character(env[,1]), split='='))
 
