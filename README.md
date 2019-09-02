@@ -73,7 +73,7 @@ MDJ=市值*當期F (步驟2) <br />
 
 ## 7. 執行須知
 
-accicalculateOnce.R : 補歷史資料 (執行一次)<br />
+accIndexcalculateOnce.R : 補歷史資料 (執行一次)<br />
 調整日取成分股 (排程:每年二、五、九、十一月第三週禮拜五執行 中午十二點執行) #0 12 14-21 2,5,8,11 * if [ date ‘+\%w’ = "5" ]; then <Rscript currentConstituent.R >;fi <br />
 dailyindex.R : 每日爬前一日coinmarket收盤資料，計算當日指數 (排程:每天早上九點執行) <br />
  
