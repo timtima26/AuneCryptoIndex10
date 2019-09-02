@@ -25,8 +25,8 @@ IF 上市日期  <br />
 F  = 權重/市值*不固定常數(成份股總市值除以1.5) <br/>
 調整後市值(MDJ) = 市值 * F  <br/>
 
-`Create A table : 成分股名稱、市值、權重、F 值、MDJ、調整日期 (當前)  `<br/>
-`Create A’ table : 成分股名稱、市值、權重、F 值、MDJ、調整日期 (歷史) `
+`Create A table : 成分股名稱、市值、權重、F 值、MDJ、調整日期 (當前、歷史)  `<br/>
+
 
 
 ## 3.	算指數基期和除數
@@ -64,9 +64,23 @@ MDJ=市值*當期F (步驟2) <br />
 2018/2/16-2018/8/15每日成份股市值*F2 (MDJ)加總除以第二期調整日除數D2 <br />
 成份股市值*F3 (MDJ)加總除以第三期調整日除數D3 <br />
 
-`Create E table : 當日指數、日期`
+`Create D table : 當日指數、日期`
 
 ## 6. 排程：
 每季第三個禮拜五的早上2點 執行 步驟1 更新 A table的所有欄位 新增 A’ table的所有欄位資料 <br />
 每季第三個禮拜五的早上3點 執行 步驟2 更新 B table的所有欄位 新增 B’ table的所有欄位資料  <br />
 每日早上4點 執行 步驟4和5 新增 C&E table的所有欄位 <br />
+
+
+## table name	description
+
+A:currentConstituent	當前成分股 <br />
+A:constituentHistory	歷史成分股 <br />
+B:currentDivisor	當前除數 <br />
+B:divisorHistory	歷史指數除數 <br />
+C:cryptoCcurrencyHistory	成份股股價市值資料 <br />
+C:cryptoCurrencyTag	網頁爬蟲代碼 <br />
+D:myCryptoIndex	每日指數與調整市值 <br />
+
+Commit status 1 of 1 passed Success
+Currently watchingStop watching
