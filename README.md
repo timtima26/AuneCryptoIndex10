@@ -7,7 +7,8 @@
 ## 1.	挑選成分股- 爬蟲
 
 
-#### 取市值前十大之加密貨幣指數作為指數成分股，之後每季調整，調整日定在每年2,5,8,11月的第三個禮拜五，取前一日收盤。 
+
+#### 取市值前十大之加密貨幣指數作為指數成分股，之後每季調整，調整日定在每年2,5,8,11,12月的第三個禮拜五，取前一日收盤。 
 
 >例如：<br />
 2018/1/1  取 2017/12/31 歷史快照 找到市值前十大成分股 <br />
@@ -63,8 +64,9 @@ MDJ=市值*當期F (步驟2) <br />
 注意：F值與除數在調整日前都是固定的 <br />
 
 
+
 >2018/1/1-2018/2/16每日成份股市值*F1 (MDJ)加總除以基期除數  <br />
-2018/2/16-2018/8/15每日成份股市值*F2 (MDJ)加總除以第二期調整日除數D2 <br />
+2018/2/16-2018/8/15每日成份股市值*F2 (MDJ)加總除以第二期調整日除數 D2 <br />
 成份股市值*F3 (MDJ)加總除以第三期調整日除數D3 <br />
 
 `Create D table : 當日指數、日期`
@@ -82,9 +84,9 @@ dailyindex.R : 每日爬前一日coinmarket收盤資料，計算當日指數 (�
  
 ## table name	description
 
-A:currentConstituent	當前成分股資料表 <br />
+A:currentConstituent	當前成分股 <br />
 A:constituentHistory	歷史成分股 <br />
-B:currentDivisor	當前徐數 <br />
+B:currentDivisor	當前除數 <br />
 B:divisorHistory	歷史指數除數 <br />
 C:cryptoCcurrencyHistory	成份股股價市值資料 <br />
 C:cryptoCurrencyTag	網頁爬蟲代碼 <br />
