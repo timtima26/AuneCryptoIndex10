@@ -4,7 +4,7 @@
 目標：取加密貨幣市場市值前十大的貨幣編制成指數，設定2018/1/1起為基期,指數起始值為1,000，每日更新 (end of day index ) <br />
 資料源：coinmarketcap （ 加密貨幣市場中，流量最大數據最受歡迎的數據查詢網站）
 
-## 1.	挑選成分股- 爬蟲來源
+## 1.	挑選成分股- 爬蟲
 
 
 #### 取市值前十大之加密貨幣指數作為指數成分股，之後每季調整，調整日定在每年2,5,8,11月的第三個禮拜五，取前一日收盤。 
@@ -82,9 +82,9 @@ dailyindex.R : 每日爬前一日coinmarket收盤資料，計算當日指數 (�
  
 ## table name	description
 
-A:currentConstituent	當前成分股 <br />
+A:currentConstituent	當前成分股資料表 <br />
 A:constituentHistory	歷史成分股 <br />
-B:currentDivisor	當前除數 <br />
+B:currentDivisor	當前徐數 <br />
 B:divisorHistory	歷史指數除數 <br />
 C:cryptoCcurrencyHistory	成份股股價市值資料 <br />
 C:cryptoCurrencyTag	網頁爬蟲代碼 <br />
